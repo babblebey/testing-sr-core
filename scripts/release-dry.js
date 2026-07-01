@@ -17,11 +17,12 @@ const context = {
 };
 const runtimeOptions = { dryRun: true };
 
-const { options, plugins } = await resolveConfig(context, runtimeOptions, {
-  buildPlugins: true,
-});
+const { options } = await resolveConfig(context, runtimeOptions);
 
 const result = await semanticRelease({
   context: { ...context, options },
-  plugins,
+  plugins: [
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github",
+  ]
 });

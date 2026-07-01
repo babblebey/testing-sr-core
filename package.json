@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/babblebey/testing-sr-core#readme",
   "dependencies": {
-    "@semantic-release/core": "^1.0.0-beta.1"
+    "@semantic-release/core": "^1.0.0-beta.2"
   }
 }
